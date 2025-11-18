@@ -12,8 +12,8 @@ def color_text(text, color_code):
     return f"\033[{color_code}m{text}\033[0m"
 
 def banner():
-    # CRYPTICX Banner
-    crypticx_banner = r"""
+    # HCS Banner
+    HCS_banner = r"""
 █████   █████         █████████         █████████ 
 ▒▒███   ▒▒███         ███▒▒▒▒▒███       ███▒▒▒▒▒███
  ▒███    ▒███        ███     ▒▒▒       ▒███    ▒▒▒ 
@@ -34,9 +34,9 @@ def banner():
     
     clear_screen()
     
-    # CRYPTICX Display
+    # HCS Display
     print(color_text("═" * 60, '1;36'))
-    for line in crypticx_banner.split('\n'):
+    for line in HCS_banner.split('\n'):
         print(color_text(line, '1;35'))
     
     # Haq Cyber Squad Display
@@ -81,14 +81,14 @@ def progress_bar():
     print()
 
 def display_info():
-    print("\n" + color_text("🏴 HAQ CYBER SQUAD - CRYPTICX", '1;33'))
+    print("\n" + color_text("🏴 HAQ CYBER SQUAD - TEAM", '1;33'))
     print(color_text("═" * 45, '1;36'))
     
     info = {
-        "👤 Operator": os.getenv('USER', 'CRYPTICX'),
-        "📟 Terminal": "iSH Shell",
-        "🐧 Platform": "Alpine Linux",
-        "🔐 Security": "LEVEL 4",
+        "👤 Operator": os.getenv('USER', 'TEAM'),
+        "📟 Terminal": "Termux",
+        "🐧 Platform": "Linux",
+        "🔐 Security": "LEVEL 100",
         "🎯 Mission": "Cyber Defense",
         "🕐 Time": datetime.now().strftime("%H:%M:%S")
     }
